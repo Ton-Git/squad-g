@@ -1,0 +1,41 @@
+{
+  "name": "@bradygaster/squad",
+  "version": "0.6.0-alpha.0",
+  "description": "Squad — Programmable multi-agent runtime for GitHub Copilot, built on @github/copilot-sdk",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "squad": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@github/copilot-sdk": "file:../copilot-sdk/nodejs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  },
+  "keywords": [
+    "copilot",
+    "multi-agent",
+    "squad",
+    "sdk"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bradygaster/squad.git"
+  }
+}
