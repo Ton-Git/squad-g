@@ -46,7 +46,7 @@ Templates in `templates/workflows/*.yml` focus on CI/release/triage/heartbeat/do
 
 ## Is GitHub Actions mandatory?
 
-## Answer
+### Answer
 
 **No, not strictly mandatory for using Squad.**
 
@@ -66,18 +66,18 @@ What you lose without Actions:
 
 ## Plan: make GitHub Actions explicitly optional
 
-## Goal
+### Goal
 
 Enable fully supported “no GitHub Actions” mode with predictable behavior across init/upgrade/docs.
 
-## Scope
+### Scope
 
 - CLI flags and behavior
 - Upgrade behavior controls
 - Documentation clarity
 - Validation tests
 
-## Non-goals
+### Non-goals
 
 - Replacing GitHub Actions with another CI provider in this change
 - Altering core agent execution model
