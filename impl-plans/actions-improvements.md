@@ -26,7 +26,13 @@ Implication: the lower-level API already has a mechanism to make workflow creati
 
 `packages/squad-cli/src/cli/core/init.ts` calls SDK init with:
 
-- `includeWorkflows: true`
+```ts
+const initOptions: InitOptions = {
+  // ...
+  includeWorkflows: true,
+  // ...
+};
+```
 
 No CLI flag currently exposes disabling this.
 
@@ -105,7 +111,15 @@ Enable fully supported “no GitHub Actions” mode with predictable behavior ac
 1. Add upgrade flag:
    - `squad upgrade --no-workflows`
 2. Add an optional persistent preference in `squad.config.ts` (example):
-   - `github: { workflows: { enabled: false } }`
+   ```ts
+   export default {
+     github: {
+       workflows: {
+         enabled: false
+       }
+     }
+   };
+   ```
 3. Upgrade resolution order:
    - CLI flag overrides config
    - config overrides default
